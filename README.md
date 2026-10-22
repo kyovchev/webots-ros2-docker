@@ -90,8 +90,8 @@ cp /usr/share/fonts/truetype/dejavu/* <path-to-venv>/lib/python3.12/site-package
 ## Services in the Container
 
 The Docker container provided the following services:
-- 127.0.0.1:6080 - noVNC at 127.0.0.1:6080;
-- 127.0.0.1:9090 - camera streams from ROS 2 topics at 127.0.0.1:9090;
-- 127.0.0.1:8001 - Robot API at 127.0.0.1:8001.
+- noVNC at 127.0.0.1:6080;
+- camera streams from ROS 2 topics at 127.0.0.1:9090;
+- Robot API at 127.0.0.1:8001.
 
 *Note: If you have connected to a remote server you might need to manually forward the ports to your computer. This can be done from the Visual Studio Code interface.*
