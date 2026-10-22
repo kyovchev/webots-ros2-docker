@@ -2,6 +2,8 @@
 
 This repository contains Docker container with a Webots simulation of robot running with ROS 2 and MoveIt for motion planning.
 
+[![Webots Simulation](./images/simulation.png)](./images/simulation.png)
+
 ## Docker Containter
 
 First you need to build the container located in the [./docker/](./docker/). Then you will have the simulation environment.
@@ -69,6 +71,8 @@ The scripts are as follows:
 - [./examples/track_object.py](./examples/track_object.py) shows how to read the simulated camera RGB stream or real USB camera from OpenCV and to filter the image by a specific color;
 
 - [./examples/track_object_with_depth.py](./examples/track_object_with_depth.py) shows how to read both the simulated RGB and the depth video streams and how to locate an object.
+
+[![Tracking Example](./images/tracking_example.png)](./images/tracking_example.png)
 
 *Note: If you have problems with the fonts for the trackbar labels you can try the following:*
 ```bash
