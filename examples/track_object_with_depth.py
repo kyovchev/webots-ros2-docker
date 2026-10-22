@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 
+SCALE = 0.5
+
 # Stream URLs using native OpenCV VideoCapture
 RGB_STREAM_URL = "http://localhost:9090/stream?topic=/object_detector/camera/image_color"
 DEPTH_STREAM_URL = "http://localhost:9090/stream?topic=/object_detector/range_finder/image"
@@ -156,7 +158,8 @@ def main():
                     cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
 
         final_window = np.vstack((header_panel, combined_streams))
-        cv2.imshow("Robot Vision & Tracking", final_window)
+        cv2.imshow("Robot Vision & Tracking", cv2.resize(
+            final_window, None, fx=SCALE, fy=SCALE))
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
