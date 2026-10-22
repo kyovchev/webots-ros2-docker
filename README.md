@@ -4,7 +4,7 @@ This repository contains Docker container with a Webots simulation of robot runn
 
 ## Docker Containter
 
-First you need to build the container located in the [./webots-ros2-docker/](./webots-ros2-docker/). Then you will have the simulation environment.
+First you need to build the container located in the [./docker/](./docker/). Then you will have the simulation environment.
 
 The initial build will take a while. Please be patient.
 
@@ -27,6 +27,7 @@ docker exec -it ros2-jazzy-webots bash
 docker system prune
 docker system prune -a --volumes
 docker builder prune -a
+docker image prune -a
 ```
 
 ## Webots Simulation
