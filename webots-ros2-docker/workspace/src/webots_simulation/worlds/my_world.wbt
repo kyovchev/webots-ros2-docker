@@ -1,0 +1,73 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "../protos/my_robot.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/CircleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.016162916126754464 0.9972996910770058 -0.07163858122539933 0.46087448852770485
+  position -1.0438370808983213 0.16533080919964416 0.6345745471385724
+  follow "my_robot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+CircleArena {
+}
+my_robot {
+  translation 0 0 0.01
+  controller "<extern>"
+}
+DEF TARGET_BOX Solid {
+  translation 0.12 0 0.005
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.02 0.01
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.02 0.02 0.01
+  }
+}
+Robot {
+  children [
+    Solid {
+      translation 0 0 0.9
+      children [
+        RangeFinder {
+          rotation 0 1 0 1.5708
+          width 320
+          height 240
+        }
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.666667 1 0
+            metalness 0
+          }
+          geometry Box {
+            size 0.02 0.02 0.02
+          }
+        }
+        Camera {
+          translation -1.93726e-07 0 0
+          rotation 0 -1 0 -1.5707953071795862
+          width 640
+          height 480
+        }
+      ]
+    }
+  ]
+  name "object_detector"
+  controller "<extern>"
+  supervisor TRUE
+}

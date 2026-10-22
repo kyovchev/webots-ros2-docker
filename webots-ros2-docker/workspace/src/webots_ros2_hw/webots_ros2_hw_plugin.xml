@@ -1,0 +1,13 @@
+<library path="webots_ros2_hw">
+  <class
+    name="webots_ros2_hw/TopicHardware"
+    type="webots_ros2_hw::TopicHardware"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Hardware interface that bridges ROS 2 Control / MoveIt 2 with a robot
+      exposed via ROS 2 topics.  Joint state is received on per-joint topics
+      (joint0 … joint5) and commands are sent as a Float32MultiArray on a
+      single command topic (/my_robot_cmd).
+    </description>
+  </class>
+</library>

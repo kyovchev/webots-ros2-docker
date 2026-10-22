@@ -1,0 +1,9 @@
+# Goal — empty, sending it just triggers the process.
+# All configuration lives in node parameters (see pick_and_place_server.py).
+---
+# Result
+bool success
+string message
+---
+# Feedback
+string status

@@ -1,0 +1,23 @@
+services:
+  ros2-webots:
+    build:
+      context: .
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    image: ros2-jazzy-webots:latest
+    container_name: ros2-jazzy-webots
+    platform: linux/amd64          # Webots .deb is x86_64 only
+    ports:
+      - "127.0.0.1:6080:6080"      # noVNC; drop "127.0.0.1:" to expose on the network
+      - "127.0.0.1:9090:9090"      # camera streams; drop "127.0.0.1:" to expose on the network
+      - "127.0.0.1:8001:8001"      # robot api; drop "127.0.0.1:" to expose on the network
+    environment:
+      RESOLUTION: 1600x900
+      VNC_PASSWORD: ""             # set a password if you expose the port
+      ROS_DOMAIN_ID: "0"
+    volumes:
+      - ./workspace:/home/ros/ros2_ws
+    shm_size: "2gb"                # Webots/Qt need a large /dev/shm
+    # network_mode: host           # uncomment to talk to ROS 2 nodes on the host (then remove "ports")
+    restart: no

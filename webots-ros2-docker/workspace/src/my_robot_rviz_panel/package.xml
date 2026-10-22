@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>my_robot_rviz_panel</name>
+  <version>0.0.0</version>
+  <description>My Robot RViz Panel</description>
+  <maintainer email="a@a.com">A</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>my_robot_interfaces</depend>
+  <depend>pluginlib</depend>
+  <depend>rviz_common</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

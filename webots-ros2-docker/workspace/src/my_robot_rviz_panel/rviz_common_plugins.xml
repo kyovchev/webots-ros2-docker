@@ -1,0 +1,5 @@
+<library path="my_robot_rviz_panel">
+  <class type="my_robot_rviz_panel::MyRobotPanel" base_class_type="rviz_common::Panel">
+    <description>A very basic panel</description>
+  </class>
+</library>

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<robot name="object_detector">
+    <webots>
+        <plugin type="webots_simulation.object_detector.ObjectDetector" />
+    </webots>
+</robot>

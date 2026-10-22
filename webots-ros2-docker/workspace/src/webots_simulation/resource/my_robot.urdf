@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<robot name="my_robot">
+    <webots>
+        <plugin type="webots_simulation.my_robot_driver.MyRobotDriver" />
+    </webots>
+</robot>
