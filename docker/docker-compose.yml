@@ -12,6 +12,7 @@ services:
       - "127.0.0.1:6080:6080"      # noVNC; drop "127.0.0.1:" to expose on the network
       - "127.0.0.1:9090:9090"      # camera streams; drop "127.0.0.1:" to expose on the network
       - "127.0.0.1:8001:8001"      # robot api; drop "127.0.0.1:" to expose on the network
+      - "127.0.0.1:8002:8002"      # scene api; drop "127.0.0.1:" to expose on the network
     environment:
       RESOLUTION: 1600x900
       VNC_PASSWORD: ""             # set a password if you expose the port

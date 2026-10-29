@@ -1,0 +1,34 @@
+#VRML_SIM R2025a utf8
+
+PROTO Aruco5 [
+  field SFVec3f translation 0 0 0.02
+  field SFRotation rotation 0 0 1 0
+  field SFVec3f size 0.128 0.128 0.0001
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name "aruco"
+
+    children [
+      Shape {
+        appearance PBRAppearance {
+          baseColor 1 1 1
+          roughness 1
+          metalness 0
+
+          baseColorMap ImageTexture {
+            url [
+              "./textures/aruco_original_id5_128x128.png"
+            ]
+          }
+        }
+
+        geometry Box {
+          size IS size
+        }
+      }
+    ]
+  }
+}

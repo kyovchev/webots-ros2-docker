@@ -2,5 +2,8 @@
 <robot name="object_detector">
     <webots>
         <plugin type="webots_simulation.object_detector.ObjectDetector" />
+        <plugin type="webots_simulation.scene_manipulator.SceneManipulator">
+            <port>8002</port>
+        </plugin>
     </webots>
 </robot>

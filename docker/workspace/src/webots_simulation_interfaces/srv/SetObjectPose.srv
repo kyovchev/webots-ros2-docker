@@ -1,0 +1,9 @@
+# Teleport a Webots node, looked up by its DEF name.
+# An all-zero orientation quaternion (the default) leaves the orientation unchanged.
+string name
+geometry_msgs/Pose pose
+# By default velocities are zeroed so the object does not keep moving.
+bool keep_velocity
+---
+bool success
+string message

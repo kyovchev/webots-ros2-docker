@@ -1,20 +1,31 @@
 from setuptools import find_packages, setup
+from glob import glob
+import os
 
 package_name = 'webots_simulation'
 data_files = []
-data_files.append(
-    ('share/ament_index/resource_index/packages', ['resource/' + package_name]))
+data_files.append(('share/ament_index/resource_index/packages',
+                   ['resource/' + package_name]))
 data_files.append(('share/' + package_name + '/launch',
-                  ['launch/simulation.launch.py']))
-data_files.append(
-    ('share/' + package_name + '/worlds', ['worlds/my_world.wbt']))
+                   ['launch/simulation.launch.py']))
+data_files.append(('share/' + package_name + '/worlds',
+                   ['worlds/my_world.wbt']))
 data_files.append(('share/' + package_name + '/resource',
-                  ['resource/my_robot.urdf']))
+                   ['resource/my_robot.urdf']))
 data_files.append(('share/' + package_name + '/resource',
-                  ['resource/object_detector.urdf']))
-data_files.append(('share/' + package_name + '/protos',
-                  ['protos/my_robot.proto']))
-data_files.append(('share/' + package_name, ['package.xml']))
+                   ['resource/object_detector.urdf']))
+for root, dirs, files in os.walk('protos'):
+    install_dir = os.path.join(
+        'share',
+        package_name,
+        root
+    )
+    data_files.append((
+        install_dir,
+        [os.path.join(root, f) for f in files]
+    ))
+data_files.append(('share/' + package_name,
+                   ['package.xml']))
 
 setup(
     name=package_name,
@@ -32,6 +43,7 @@ setup(
         'console_scripts': [
             'my_robot_driver = webots_simulation.my_robot_driver:main',
             'object_detector = webots_simulation.object_detector:main',
+            'scene_manipulator = webots_simulation.scene_manipulator:main',
             'ros_web_service = webots_simulation.ros_web_service:main'
         ],
     },

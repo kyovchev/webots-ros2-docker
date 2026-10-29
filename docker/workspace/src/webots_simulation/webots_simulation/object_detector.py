@@ -22,7 +22,7 @@ class ObjectDetector:
         timestep = int(self.__robot.getBasicTimeStep())
         self.camera = self.__robot.getDevice('camera')
         self.camera.enable(timestep)
-        self.range_finder = self.__robot.getDevice('range_finder')
+        self.range_finder = self.__robot.getDevice('range-finder')
         self.range_finder.enable(timestep)
 
         self.target = self.__robot.getFromDef('TARGET_BOX')

@@ -1,0 +1,7 @@
+# Read the pose of a Webots node, looked up by its DEF name.
+# Relative to the node's parent (the world frame for top-level nodes).
+string name
+---
+bool success
+string message
+geometry_msgs/Pose pose

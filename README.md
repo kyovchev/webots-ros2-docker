@@ -70,7 +70,15 @@ The scripts are as follows:
 
 - [./examples/track_object.py](./examples/track_object.py) shows how to read the simulated camera RGB stream or real USB camera from OpenCV and to filter the image by a specific color;
 
-- [./examples/track_object_with_depth.py](./examples/track_object_with_depth.py) shows how to read both the simulated RGB and the depth video streams and how to locate an object.
+- [./examples/track_object_with_depth.py](./examples/track_object_with_depth.py) shows how to read both the simulated RGB and the depth video streams and how to locate an object;
+
+- [./examples/scene_api_demo.py](./examples/scene_api_demo.py) shows how to manipulate the scene with the provided API;
+
+- [./examples/scene_ros_demo.py](./examples/scene_ros_demo.py) shows how to manipulate the scene from ROS 2 nodes;
+
+- [./examples/pick_and_place_demo.py](./examples/pick_and_place_demo.py) contains sample script which maniplates the scene and executes pick and place operation;
+
+- [./examples/helpers.ipynb](./examples/helpers.ipynb) is a Jupyter notebook with useful scripts for creation of images like chessboard pattern or ArUco markers which can be used as a textures for objects in the Webots simulation.
 
 [![Tracking Example](./images/tracking_example.png)](./images/tracking_example.png)
 
@@ -92,6 +100,11 @@ cp /usr/share/fonts/truetype/dejavu/* <path-to-venv>/lib/python3.12/site-package
 The Docker container provided the following services:
 - noVNC at 127.0.0.1:6080;
 - camera streams from ROS 2 topics at 127.0.0.1:9090;
-- Robot API at 127.0.0.1:8001.
+- robot API at 127.0.0.1:8001;
+- 127.0.0.1:8002 - scene manipulator API at 127.0.0.1:8002.
 
 *Note: If you have connected to a remote server you might need to manually forward the ports to your computer. This can be done from the Visual Studio Code interface.*
+
+## ROS 2 Apps
+
+RViz is not started automatically. If you need RViz with MoveIt interface you can launch it with: `ros2 launch my_robot_moveit_config moveit_rviz.launch.py`.
