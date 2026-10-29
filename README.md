@@ -101,7 +101,7 @@ The Docker container provided the following services:
 - noVNC at 127.0.0.1:6080;
 - camera streams from ROS 2 topics at 127.0.0.1:9090;
 - robot API at 127.0.0.1:8001;
-- 127.0.0.1:8002 - scene manipulator API at 127.0.0.1:8002.
+- scene manipulator API at 127.0.0.1:8002.
 
 *Note: If you have connected to a remote server you might need to manually forward the ports to your computer. This can be done from the Visual Studio Code interface.*
 
