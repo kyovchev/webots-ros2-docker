@@ -78,7 +78,15 @@ The scripts are as follows:
 
 - [./examples/pick_and_place_demo.py](./examples/pick_and_place_demo.py) contains sample script which maniplates the scene and executes pick and place operation;
 
-- [./examples/helpers.ipynb](./examples/helpers.ipynb) is a Jupyter notebook with useful scripts for creation of images like chessboard pattern or ArUco markers which can be used as a textures for objects in the Webots simulation.
+- [./examples/helpers.ipynb](./examples/helpers.ipynb) is a Jupyter notebook with useful scripts for creation of images like chessboard pattern or ArUco markers which can be used as a textures for objects in the Webots simulation;
+
+- [./examples/webots_camera_calibration.ipynb](./examples/webots_camera_calibration.ipynb) is a Jupyter notebook which uses the API to move the chessboard pattern in the camera view to capture images for camera calibration;
+
+  [![Webots Camera Calibration](./images/webots_camera_calibration.png)](./images/webots_camera_calibration.png)
+
+- [./examples/webots_pick_and_place.ipynb](./examples/webots_pick_and_place.ipynb) is a Jupyter notebook which demostrates how the planar position of the yellow object can be found, picked and placed when an ArUco marker is placed in the workspace.
+
+  [![Webots Pick and Place](./images/webots_pick_and_place.png)](./images/webots_pick_and_place.png)
 
 [![Tracking Example](./images/tracking_example.png)](./images/tracking_example.png)
 
