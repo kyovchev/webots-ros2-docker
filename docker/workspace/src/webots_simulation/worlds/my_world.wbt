@@ -21,12 +21,12 @@ TexturedBackgroundLight {
 }
 CircleArena {
 }
-my_robot {
+DEF ROBOT my_robot {
   translation 0.05 -0.05 0.01
   controller "<extern>"
 }
 DEF TARGET_BOX Solid {
-  translation 0.12 0 0.005
+  translation -0.07 0.03 0.005
   children [
     Shape {
       appearance PBRAppearance {
@@ -47,12 +47,12 @@ DEF TARGET_BOX Solid {
   }
 }
 Robot {
+  translation 0 0 0.8
+  rotation 0 1 0 1.7
   children [
     Solid {
-      translation 0 0 0.9
       children [
         RangeFinder {
-          rotation 0 1 0 1.5708
           width 320
           height 240
         }
@@ -66,8 +66,6 @@ Robot {
           }
         }
         Camera {
-          translation -1.93726e-07 0 0
-          rotation 0 -1 0 -1.5707953071795862
           width 640
           height 480
         }
@@ -83,7 +81,7 @@ DEF CHESSBOARD Chessboard {
   rotation 0 0 1 0
 }
 DEF ARUCO_5 Aruco5 {
-  translation -0.15 -0.15 0.00
+  translation -0.11 -0.11 0.00
   rotation 0 0 1 0
 }
 DEF BLUE_HEXAGON BlueHexagon {
