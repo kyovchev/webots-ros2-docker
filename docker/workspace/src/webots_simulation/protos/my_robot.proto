@@ -88,7 +88,7 @@ PROTO my_robot [
                 maxVelocity 3.14159265
                 minPosition -2.268928
                 maxPosition 2.268928
-                maxTorque 10.0
+                maxTorque 1000.0
               }
               PositionSensor {
                 name "joint0_sensor"
@@ -139,7 +139,7 @@ PROTO my_robot [
                       maxVelocity 3.14159265
                       minPosition -2.268928
                       maxPosition 2.268928
-                      maxTorque 10.0
+                      maxTorque 1000.0
                     }
                     PositionSensor {
                       name "joint1_sensor"
@@ -186,7 +186,7 @@ PROTO my_robot [
                             maxVelocity 3.14159265
                             minPosition -2.268928
                             maxPosition 2.268928
-                            maxTorque 10.0
+                            maxTorque 1000.0
                           }
                           PositionSensor {
                             name "joint2_sensor"
@@ -234,7 +234,7 @@ PROTO my_robot [
                                   maxVelocity 3.14159265
                                   minPosition -2.268928
                                   maxPosition 2.268928
-                                  maxTorque 10.0
+                                  maxTorque 1000.0
                                 }
                                 PositionSensor {
                                   name "joint3_sensor"
@@ -282,7 +282,7 @@ PROTO my_robot [
                                         maxVelocity 3.14159265
                                         minPosition -2.268928
                                         maxPosition 2.268928
-                                        maxTorque 10.0
+                                        maxTorque 1000.0
                                       }
                                       PositionSensor {
                                         name "joint4_sensor"
@@ -330,7 +330,7 @@ PROTO my_robot [
                                               maxVelocity 3.14159265
                                               minPosition -3.14
                                               maxPosition 3.14
-                                              maxTorque 10.0
+                                              maxTorque 1000.0
                                             }
                                             PositionSensor {
                                               name "joint5_sensor"
